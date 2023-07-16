@@ -1,0 +1,32 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+void reverseText()
+{
+    char str[100];
+    printf("Bir metin girin (100 karakterden uzun olmamalıdır): ");
+
+    char c;
+    int uzunluk = 0;
+    while ((c = getchar()) != '\n')
+    {
+        str[uzunluk] = c;
+        uzunluk++;
+    }
+    str[uzunluk] = '\0'; //dizinin sonunu belirler.
+    printf("Metnin düz hali: ");
+    printf("%s\n", str);
+
+    for (int a = uzunluk - 1; a >= 0; a--)
+    {
+        printf("%c", str[a]);
+    }
+    printf("\n");
+}
+
+
+int main (void)
+{
+    reverseText();
+}
