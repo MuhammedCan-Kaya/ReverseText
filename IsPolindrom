@@ -13,26 +13,25 @@ void isPolindrom()
     int artansayi = mod;
     int counter = 0; //Counter değişkeni, ise kelime uzunluğuna göre kıyas edeceğimiz bir değişken olacak.
 
-    while (azalansayi > 0 && artansayi < uzunluk)
+    while (azalansayi >= 0 && artansayi < uzunluk)
     {
-
+        azalansayi --;
+        artansayi ++;
         if (str[artansayi] == str[azalansayi]) //Moddan sonra birbirine simetrik olarak denk gelen harfleri kontrol ederek -eğer aynılarsa- counter değerini 2 arttırır.
         {
             counter += 2;
         }
-    azalansayi --;
-    artansayi ++;
+
      }
 
-     if (counter == uzunluk - 1) //Yukarıda artmış olan counter değeri ile, kelimenin modu hariç, geri kalan harflerin sayısını kıyaslayarak eşit olup olmamasını kontrol eder. 
+     if (counter == uzunluk - 1) //Yukarıda artmış olan counter değeri ile, kelimenin modu hariç, geri kalan harflerin sayısını kıyaslayarak eşit olup olmamasını kontrol eder.
      {
-        printf("Bu kelime polindromdur.");
+        printf("Bu kelime polindromdur. \n");
      }
 
      else
-
      {
-        printf("Bu kelime polindrom değildir.");
+        printf("Bu kelime polindrom değildir. \n");
      }
 }
 
